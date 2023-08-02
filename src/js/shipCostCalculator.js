@@ -4,7 +4,7 @@ $(document).ready(function () {
         //insert code here to retrieve data entered by the user and add them to the message to be displayed
         let bookweight = $("#id_book_weight").val();
         let bookAmount= parseInt( $("#id_book_amount").val());
-        let shippingTime = $(":radio").val();
+        let shippingTime = $("input[type=radio]:checked").val();
         let shippingMethod = $("#id_shipping_method").val();
 
 
@@ -21,7 +21,7 @@ $(document).ready(function () {
             case "3-5":
                 totalCost += 25;
                 break;
-            case "6=9":
+            case "6-9":
                 totalCost += 10;
                 break;
         }
