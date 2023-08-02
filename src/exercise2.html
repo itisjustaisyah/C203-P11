@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise 2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <style>
+            .red   { color: #FF0000; }
+            .green { color: #00FF00; }
+            .blue  { color: #0000FF; }
+        </style>
+    </head>
+    <body>
+        <h1 id="hello">Hi!</h1>
+        <p id="message" class="red">First Line </p>
+        <p class="red">Second Line </p>
+        <p>Third Line </p>
+
+        <script> //script tag to create script
+            $(document).ready(function(){ //when document is ready, initalise following function
+                $('#hello').addClass("green"); // element with id "hello"  add "green" class
+                $("p").css("font-style", "italic"); //change all <p> element with font-style="italic"
+                $(".red").css("border", "2px solid green"); // all element of "red" class add border
+                $("#message").removeClass("red"); // all element with id "message" remove "red" class
+                $("#message").append(" John Smith"); //all element with id "message" append " John Smith" to content
+                $("p").prepend("Hello World ");//all <p> element prepend " Hello World" to content
+            });
+        </script>
+    </body>
+</html>
